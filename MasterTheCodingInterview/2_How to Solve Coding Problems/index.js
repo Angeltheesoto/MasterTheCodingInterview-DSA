@@ -1,32 +1,13 @@
-// google interview
-/*
-1. collection of nums
-2. find a matching pair that is equal to a sum
-*/
-// function hasPairWithSum(data, sum) {
-//   let low = 0;
-//   let hi = data.length - 1;
-//   while (low < hi) {
-//     let s = data[low] + data[hi];
-//     if (s === sum) {
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   }
-// }
-// console.log(hasPairWithSum([1, 2, 4, 4], 8));
-
 // Interview exercise:
 // Given 2 arrays, create a function that let's a user know (true/false) whether these two arrays contain any common items
 // For Example:
 // const array1 = ['a', 'b', 'c', 'x']
 // const array2 = ['z', 'y', 'i']
 // Should return false
-
 // 2 paramaters - arrays - no size limit
 // return true or false
 
+// Video code walkthrough
 // T = O(a*b), M = O(1)
 // function commonItems(arr1, arr2) {
 //   for (let i = 0; i < arr1.length; i++) {
