@@ -84,8 +84,9 @@ class LinkedList {
     for (let i = 0; i < index - 1; i++) {
       curr = curr.next;
     }
-    newNode.next = curr.next;
-    curr.next = newNode;
+    // curr.next can be two different values or meanings
+    newNode.next = curr.next; // curr.next means the next elem
+    curr.next = newNode; // curr.next means the position its at
     this.length++;
   }
 
@@ -132,13 +133,13 @@ const myLinkedList = new LinkedList(1);
 myLinkedList.append(10);
 myLinkedList.append(16);
 myLinkedList.append(88);
-// myLinkedList.insert(2, 99);
+myLinkedList.insert(2, 99);
 // myLinkedList.remove(2);
 // myLinkedList.remove(1);
 // console.log(myLinkedList);
-myLinkedList.printList();
-myLinkedList.reverse();
-myLinkedList.printList();
+// myLinkedList.printList();
+// myLinkedList.reverse();
+// myLinkedList.printList();
 
 // Doubly Linked List
 class Node2 {
