@@ -1,5 +1,4 @@
 // Recursion:
-
 // let counter = 0;
 // function inception() {
 //   console.log(counter);
@@ -36,7 +35,6 @@ function findFactorialIterative(number) {
 // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 ...
 // the pattern of the sequence is that each value is the sum of the 2 previous values, that means that for N=5 → 2+3
 //For example: fibonacciRecursive(6) should return 8
-
 // T = O(2^n) = Exponential
 function fibonacciRecursive(n) {
   if (n < 2) {
@@ -44,7 +42,6 @@ function fibonacciRecursive(n) {
   }
   return fibonacciRecursive(n - 1) + n - 2;
 }
-
 // T = O(n) = logarithmic
 function fibonacciIterative(n) {
   let arr = [0, 1];
@@ -53,6 +50,28 @@ function fibonacciIterative(n) {
   }
   return arr;
 }
-
-console.log(fibonacciRecursive(40));
+// console.log(fibonacciRecursive(40));
 // console.log(fibonacciIterative(10));
+
+//Implement a function that reverses a string using iteration...and then recursion!
+// Recursive
+function reverseString(str) {
+  if (str === "") {
+    return "";
+  } else {
+    // when you call the function again you are removing from the front and adding it to the end of the string.
+    return reverseString(str.substr(1)) + str.charAt(0);
+  }
+}
+// Iterative
+function reverseString2(str) {
+  // return str.split("").reverse().join("");
+  let reverseArr = [];
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverseArr.push(str[i]);
+  }
+  return reverseArr.join("");
+}
+
+console.log(reverseString("yoyo mastery")); // yretsam oyoy
+// console.log(reverseString2("yoyo mastery"));
