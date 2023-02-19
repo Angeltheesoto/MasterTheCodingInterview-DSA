@@ -1,6 +1,6 @@
 // Sorting Algorithms:
-const letters = ["a", "d", "z", "e", "r", "b"];
-const basket = [2, 65, 34, 2, 1, 7, 8];
+// const letters = ["a", "d", "z", "e", "r", "b"];
+// const basket = [2, 65, 34, 2, 1, 7, 8];
 // How you would think to sort it
 // console.log(basket.sort());
 // It uses the character code to sort the numbers.
